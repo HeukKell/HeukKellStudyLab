@@ -1,0 +1,87 @@
+:root{
+    --NoteColor:rgba(255, 221, 129, 0.636);
+}
+
+body{
+    margin: 0;
+    padding-top: 100px;
+    padding-left: 20px;
+}
+
+.HeadArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+
+}
+
+a{
+    text-decoration: none;
+    font-weight: 700;
+    /* color: green; */
+    color: black;
+}
+a:hover{
+    color : rgb(255,255,255);
+    text-shadow: 0 0 10px black;
+}
+
+.PointKeyword{
+    color:cornflowerblue; font-weight: 700;
+}
+.PointLine{
+    background-color: rgba(255, 226, 187, 0.5); font-weight: 700;
+}
+.ImgCenterBox{
+    width: 500px; display: flex; justify-content: center;
+}
+
+
+.CodeBlock{
+    background-color: rgb(40,40,40);
+    color: white;
+    /* font-weight: 600; */
+    width: 500px;
+    margin: 20px;
+}
+
+.Var{
+    color:skyblue;
+}
+.Reserved{
+    color:cornflowerblue;
+}
+
+.VarType{
+    color:teal;
+}
+
+.FuncName{
+    color:rgb(237, 219, 98)
+}
+
+CodeBlock{
+    display: inline-block;
+    background-color: rgb(40,40,40);
+    color: white;
+    /* font-weight: 600; */
+    width: 500px;
+    margin: 20px;
+}
+
+MySummary{
+    color: green;
+}
+
+Reserved{
+    color : cornflowerblue;
+}
+
+VarType{
+    color:skyblue;
+}
+
+FunctionName{
+    color:rgb(237, 219, 98)   
+}

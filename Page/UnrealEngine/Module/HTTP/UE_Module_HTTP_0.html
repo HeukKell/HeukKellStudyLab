@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnrealEngine::Module::HTTP</title>
+    <script src="/script.js"defer></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<style>
+    body{
+        padding-left: 20px;
+    }
+    a{
+        color: black;
+    }
+</style>
+<body>
+    <div class="NavBar">네이게이션바</div>
+    <div id="MemoComp">
+        <ul>
+            <li>
+                여러가지 태그 추가하기
+            </li>
+        </ul>
+    </div>
+
+    <h1>HTTP 모듈 사용하기</h1>
+
+    <section>
+        <h3>0. 참조</h3>
+        <ul>
+            <li><a href="https://algorfati.tistory.com/14">참조문서1</a></li>
+            <li><a href="https://daru-daru.tistory.com/29">참조문서2</a></li>
+            <li><a href="https://www.youtube.com/watch?v=vLGZp5hl6qU&t=607s">참조영상</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>1. 준비</h3>
+        <ul>
+            <li>MyProject.bulild.cs 파일에서 모듈 이름 추가</li>
+            <p>JSON 과 HTTP 를 사용할 수 있어야 한다.</p>
+            <CodeBlock style="width: 700px; padding: 30px;">
+                    <code>
+                        PrivateDependencyModuleNames.AddRange(new string[] { "HTTP", "JsonUtilities", "Json" });
+                    </code>
+            </CodeBlock>
+
+            <li>헤더 추가</li>
+            <CodeBlock style="width: 760px;">
+                <pre>
+                    <code>
+                        #include "Http.h"
+                        #include "Dom/JsonObject.h"
+                        #include "Serialization/JsonReader.h"
+                        #include "Serialization/JsonSerializer.h"
+                    </code>
+                </pre>
+            </CodeBlock>
+        </ul>
+    </section>
+
+    <section>
+        <h3>2.보낼 데이터를 JSON 형태의 FString 으로 준비하기</h3>
+        <CodeBlock style=" width: 600px; padding-left: 20px;">
+            <pre>
+                <code id="CodeHowToMakeJsonString">
+                    <script> 
+                        fetch("/Resource/UnrealEngine/Module/HTTP/0/HowToMakeJsonString.cpp")
+                        .then((result)=>{
+                            result.text()
+                            .then((code)=>{
+                                document.querySelector("#CodeHowToMakeJsonString").textContent = code;
+                            })
+                        })
+                    </script>
+                </code>
+            </pre>
+        </CodeBlock>
+    </section>
+
+    <section>
+        <h3>3. HTTP 요청 보내기</h3>
+        <CodeBlock style="width: 900px; padding-left:20px;">
+            <pre>
+                <code id="CodeHowToSendHTTPRequset">
+                    <Script>
+                        fetch("/Resource/UnrealEngine/Module/HTTP/0/HowToSendHTTPRequest.cpp")
+                        .then((result)=>{
+                            result.text()
+                            .then((code)=>{
+                                document.querySelector("#CodeHowToSendHTTPRequset").textContent = code;
+                            })
+                        })
+                    </Script>
+                </code>
+            </pre>
+        </CodeBlock>
+    </section>
+
+    <section>
+        <h3>4. HTTP 요청 담당 매니저 클래스 설계</h3>
+        <h4>ServerRequsetManager.h</h4>
+        <CodeBlock style="padding-left:  20px; width: 1500px;">
+            <pre>
+                <code id="CodeServerRequestManagerHeader">
+                    <script>
+                        fetch("/Resource/UnrealEngine/Module/HTTP/0/ServerRequestManager.h")
+                        .then((result)=>{
+                            result.text()
+                            .then((code)=>{
+                                document.querySelector("#CodeServerRequestManagerHeader").textContent = code;
+                            })
+                        })
+                    </script>
+                </code>
+            </pre>
+        </CodeBlock>
+        <h4>ServerRequsetManager.cpp</h4>
+        <CodeBlock style="padding-left:  20px; width: 1500px;">
+            <pre>
+                <code id="CodeServerRequestManagerCPP">
+                    <script>
+                        fetch("/Resource/UnrealEngine/Module/HTTP/0/ServerRequestManager.cpp")
+                        .then((result)=>{
+                            result.text()
+                            .then((code)=>{
+                                document.querySelector("#CodeServerRequestManagerCPP").textContent = code;
+                            })
+                        })
+                    </script>
+                </code>
+            </pre>
+        </CodeBlock>
+    </section>
+
+</body>
+</html>

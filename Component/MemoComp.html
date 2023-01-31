@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/style.css">
+<style>
+    #MemoArea{
+        
+        border-radius: 10px 10px 10px 10px;
+        background-color: var(--NoteColor);
+        border: 1px solid var(--NoteColor);
+        color: var(--NoteColor);
+
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+
+        transition-duration: 0.5s;
+    }
+    #MemoArea:hover{
+        width: 500px;
+        height: 500px;
+
+        padding: 10px;
+        color: black;
+    }
+
+
+</style>
+
+<div id="MemoArea">
+    __Content__
+</div>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네트워크 TCP / IP</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+</head>
+<style>
+    body{
+        padding-left: 20px;
+        padding-top: 100px;
+    }
+</style>
+<body>
+    <div class="NavBar">네이게이션바</div>
+    <div id="MemoComp">
+        <ul>
+            <li>1강을 아직 다 수료하지 못함</li>
+        </ul>
+    </div>
+    
+    <h1>1장 : 네트워크의 시작과 규약</h1>
+    <a href="https://www.youtube.com/watch?v=NOFWq2mWeGA&list=PLVsNizTWUw7GZy4UA9pntGRC9IIXIYiHm&index=1">
+        <- 참조 : 네트워크 강의
+    </a>
+    
+    <section>
+        <h3>1. 네트워크 탄생 배경</h3>
+        <div>
+            물리학계에서 거시적 세계의 상대성 이론과 미시적 세계의 양자역학이 등장한 시대
+        </div>
+        <p>
+            <strong>양자역학의 핵심</strong>
+            <ul>
+                <li>모든것은 정보다</li>
+                <li>자연현상은 정보의 네트워크 상호작용의 결과다</li>
+                <li>광자를 주고 받음으로서 광학 또는 화학적 작용이 일어난다</li>
+            </ul>
+        </p>
+    </section>
+
+    <section>        
+        <h3>2. 생태계에서 볼 수 있는 네트워크의 사례</h3>
+        <div>
+            생명중 가장 고도화된 네트워크의 사례 : 뉴런 네트워크
+            <ul><li>약 1억개의 뉴런들이 네트워크를 이루고 있다</li></ul>
+            <div class="ImgCenterBox" style="width: 400px;" ><img src="/Resource/Network/TCPIP/0/Img_Neurons_0.png" style="width: 200px;" /></div>
+        </div>
+    </section>
+
+    <section>        
+        <h3>3. 네트워크의 이점</h3>
+        아래와 같은 이점을 알 고 있기 때문에 생명체와 인간은 네트워크를 구축한다
+        <ul>
+            <li><strong>더많은 데이터의 저장</strong> : 한정된 노드와 공간에 더 많은 정보를 저장할 수 있다</li>
+            <li><strong>데이터의 안정성</strong> : 하나의 경로가 파괴되더라도 다른 경로를 통해서 노드에 도달할 수 있다.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>4. 네트워크에 대한 연구</h3>
+        <div><strong class="PointKeyword">분산 네트워크 방식</strong>과 <strong class="PointKeyword">패킷 통신 방식</strong>의 개발이 어우러져 인터넷이 등장하게 되었다.</div>
+        <ul>
+            <li>냉전시대 안전한 컴퓨터 네트워크에 대한 연구</li>
+            <p>
+                <ol>
+                    <li><span class="PointKeyword" >중앙집중형 네트워크</span></li>
+                    <div>적국의 핵무기 공격에 취약점을 가지고 있었다. 하나의 중개소가 파괴되면 모든 시스템이 마비된다</div>
+    
+                    <li><span class="PointKeyword" >분산형 네트워크</span></li>
+                    <div>하나의 통제소가 파괴되더라도 시스템이 망가지는것을 막을 수 있다</div>
+                </ol>
+            </p>
+            <li>상업적 컴퓨터 네트워킹을 위한 패킷 통신 방식의 개발</li>
+            <p>
+                <ul>
+                    <li>데이터를 하나로 보내지 않고 여러개의 작은 조각으로 나누어 보내는 기술</li>
+                    <li>
+                        데이터를 작게해서 새로 조직해야 하는 부담이 있지만,<br>
+                        <span class="PointLine">네트워크 트래픽의 여러개의 컴퓨터가 공유</span> 할 수 있으므로,<br>
+                        <span class="PointLine">대량의 데이터 통신에 적합하다</span> 는 장점을 가지고 있었다.
+                    </li>
+                    <img src="/Resource/Network/TCPIP/0/img_packit_0.png" style="width: 500px;"/>
+                </ul>
+            </p>
+        </ul>
+    </section>
+
+    <section>
+        <h3>5. 인터넷 네트워크의 성장과 규약</h3>
+        <p>
+            <li type="none">-> 네트워크가 연결되면서 인터넷 구조를 가지게 되었습니다.</li>
+            <li type="none">-> 전 지구적인 통신 인프라와 소형 컴퓨터의 보급으로 성장하게 되었습니다.</li>
+            <li type="none">-> 웹의 등장과 함께 폭발적으로 성장하게 되었습니다.</li>
+        </p>
+        <p>
+            하지만 네트워크가 전 지구적인 규모이다 보니, <br>
+            <strong class="PointLine">네트워크의 구조를 유지</strong> 하고, <strong class="PointLine" >원하는 노드끼리 원하는 통신</strong> 을 하기위해, <br>
+            <span class="PointKeyword">규약(Protocol)</span> 이 필요하게 되었습니다.
+        </p>
+
+        <ol>
+            <li><span class="PointKeyword" >IP</span> : 네트워크 구조를 유지하기 위한 프로토콜</li>
+            <p>네트워크는 링크와 노드로 구성되어 있다. <br>
+                정보 통신 네트워크에서는 <span class="PointLine">노드가 원하는 노드를 탐색</span> 할 수 있어야 합니다. <br>
+                이를 위해서는 특정 노드가 전체 노드에서 구별되는 노드임을 보장할 수 있어야 합니다. <br>
+                ip 프로토콜은 네트워크에 참여한 <span class="PointLine">노드를 유일하게 식별</span> 할 수 있게 해주므로써, <br>
+                <span class="PointLine">네트워크 구조를 유지하고, 원하는 노드를 찾아 경로를 설정할 수 있게 도와준다.</span> <br>
+
+                <div class="ImgCenterBox"><img src="/Resource/Network/TCPIP/0/Img_Node_0.png" style="width:200px" ></div>
+            </p>
+
+            <li><span class="PointKeyword">TCP</span> : 통신을 보장하기 위한 프로토콜</li>
+            <p>
+                분산 네트워크 방식에서 여러개의 경로를 통해서 목적지에 도착합니다. <br>
+                이들 패킷은 순서가 뒤바뀔 수도 있으며, 훼손될 수도 있습니다. <br>
+                그러면 패킷의 흐름을 제어하기 위한 프로토콜이 필요합니다. <br>
+                그것이 바로 TCP 입니다.
+            </p>
+        </ol>
+
+        <p>
+            TCP 와 IP 는 인터넷을 이루는 두가지 측면을 지원함으로써 인터넷이 원할하게 작동하도록 도와줍니다.
+        </p>
+    </section>
+</body>
+</html>

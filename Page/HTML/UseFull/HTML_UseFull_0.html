@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 학습 #1</title>
+    <script src="/script.js"defer></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<style>
+    body{
+        padding-left: 20px;
+    }
+    a{
+        color: black;
+    }
+</style>
+<body>
+    <div class="NavBar">네이게이션바</div>
+    <div id="MemoComp">
+        <ul>
+            <li>
+                여러가지 태그 추가하기
+            </li>
+        </ul>
+    </div>
+
+    <h1>HTML 유용한 코드</h1>
+
+    <section>
+        <h3>Custom Tag</h3>
+        <p>
+            마음대로 태그를 정의하여 사용할 수 있다. <br>
+            단 사용자 정의 태그는 기본적으로 span 의 형식과 같다. <br>
+            sytle 또한 적용된다.
+        </p>
+        <CodeBlock style="height: 70px;">
+            <pre>
+                <code>
+                    &lt;MyTag&gt; content &lt;/MyTag&gt;
+                </code>
+            </pre>
+        </CodeBlock>
+    </section>
+    <section>
+        <h3>html에서 다른 html 파일을 가져오는 방법</h3>
+        <CodeBlock style="width: 700px;">
+            <pre>
+                <code>
+                    /** HTML 파일을 텍스트로 반환하는 함수 */
+                    
+                    <span class="Reserved">async function</span> <span class="FuncName">fetchHTMLAsText</span>(url){
+                        <span class="Reserved">return await</span> (<span class="Reserved">await</span> <span class="FuncName">fetch</span>(url)).<span class="FuncName">text</span>();
+                    }
+                    
+                    // Navigation bar 그리기
+                    <span class="Reserved">const</span> NavElem</span> = <span class="Var">document</span>.<span class="FuncName">querySelector</span>(".NavBar");
+                    <span class="FuncName">fetchHTMLAsText</span>("/Component/NavigationBarComponent.html")
+                    .then((result)=>{
+                        NavElem.<span class="Var">innerHTML</span> = result;
+                    })
+                </code>
+            </pre>
+        </CodeBlock>
+    </section>
+
+    <section>
+        <h3>코드영역 표시하는 방법</h3>
+        <CodeBlock>
+            <pre>
+                <code>
+                    &lt;pre&gt;
+                        &lt;code&gt;
+                            코드내용 ...
+                        &lt;/code&gt;
+                    &lt;/pre&gt;
+                </code>
+            </pre>
+        </CodeBlock>
+    </section>
+</body>
+</html>
